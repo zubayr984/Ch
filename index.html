@@ -25,6 +25,20 @@
 <body>
     <div class="container">
         <h1>Chrome</h1>
+
+
+            <h3>Matnni nusxalash namunasi:</h3>
+    <div class="copy-container">
+        <!-- Nusxalanishi kerak bo'lgan matn maydoni -->
+        <input type="text" id="myInput" value="https://www.apkmirror.com/apk/google-inc/chrome/chrome-77-0-3865-73-release/google-chrome-fast-secure-77-0-3865-73-android-apk-download/download/?key=2b5052e2e72ccd2d3fbc5e93f7c33be79bc33d81">
+        
+        <!-- Nusxalash tugmasi -->
+        <button onclick="copyText()">Nusxalash</button>
+    </div>
+
+
+
+        
     <button>
         <a href"https://www.apkmirror.com/apk/google-inc/chrome/chrome-77-0-3865-73-release/google-chrome-fast-secure-77-0-3865-73-android-apk-download/download/?key=2b5052e2e72ccd2d3fbc5e93f7c33be79bc33d81" class="download-btn" >Sayt</a>
     </button>
@@ -32,5 +46,20 @@
         <!-- BU YERGA O'ZGARTIRISH KIRITING -->
         <a href="chrome.xapk" class="download-btn" download>Yuklab Olish</a>
     </div>
+
+        <script>
+        function copyText() {
+            // 1. Input elementini tanlab olamiz
+            var copyText = document.getElementById("myInput");
+
+            // 2. Matnni kompyuter/telefon xotirasiga (clipboard) yozamiz
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                // 3. Foydalanuvchiga nusxalangani haqida xabar beramiz
+                alert("Matn nusxalandi: " + copyText.value);
+            }).catch(function(err) {
+                console.error("Xatolik yuz berdi: ", err);
+            });
+        }
+    </script>
 </body>
 </html>
